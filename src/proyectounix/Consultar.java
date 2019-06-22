@@ -5,14 +5,15 @@ import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
 
 public class Consultar extends javax.swing.JFrame {
-
+    private static int i;
     public Consultar() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(false);
+        i = 0;
     }
     
-    private static int i = 0;
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
