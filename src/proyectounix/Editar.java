@@ -71,7 +71,7 @@ public class Editar extends javax.swing.JFrame {
         Integer can = (Integer) jTableMostrar.getValueAt(0, 1);
         Float cos = (Float) jTableMostrar.getValueAt(0, 2);
         ConexionDB c = new ConexionDB();
-        c.insertar("tienda", "root1", "P@ssword12", pro, can, cos);
+        c.insertar("Tienda", "root1", "P@ssword12", pro, can, cos);
     }//GEN-LAST:event_jButtonIngresarActionPerformed
 
     private void jButtonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegresarActionPerformed

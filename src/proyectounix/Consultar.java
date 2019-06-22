@@ -114,8 +114,8 @@ public class Consultar extends javax.swing.JFrame {
         String id;
         id = jTextFieldClave.getText();
         ConexionDB c = new ConexionDB();
-        String sql = "SELECT * FROM tienda.Inventario WHERE ID ="+id;
-        c.consultar("tienda", "root1", "P@ssword12", sql);
+        String sql = "SELECT * FROM Tienda.Inventario WHERE ID ="+id;
+        c.consultar("Tienda", "root1", "P@ssword12", sql);
         try {
             while (c.datos.next()){
                 jTableMostrar.setValueAt(c.datos.getInt("ID"), i, 0);

@@ -63,7 +63,7 @@ public class ConexionDB {
         int max = 0;
         try {
             conexion = (Connection) this.getConnection(DB, usr, psswrd);
-            inserta = conexion.prepareStatement("INSERT INTO tienda.Inventario (ID, Producto, Cantidad, "
+            inserta = conexion.prepareStatement("INSERT INTO Tienda.Inventario (ID, Producto, Cantidad, "
                     + "Costo) VALUES (NULL, ?, ?, ?)");
             inserta.setString(1,pro);
             inserta.setInt(2,can);

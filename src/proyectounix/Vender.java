@@ -123,8 +123,8 @@ public class Vender extends javax.swing.JFrame {
         String id;
         id = jTextFieldClave.getText();
         ConexionDB c = new ConexionDB();
-        String sql = "SELECT * FROM tienda.Inventario WHERE ID ="+id;
-        c.consultar("tienda", "root1", "P@ssword12", sql);
+        String sql = "SELECT * FROM Tienda.Inventario WHERE ID ="+id;
+        c.consultar("Tienda", "root1", "P@ssword12", sql);
         try {
             while (c.datos.next()){
                 jTableMostrar.setValueAt(c.datos.getInt("ID"), i, 0);
@@ -155,8 +155,8 @@ public class Vender extends javax.swing.JFrame {
             if (exis>=cant) {
                 Integer ncant = exis - cant;
                 ConexionDB c = new ConexionDB();
-                String sql = "UPDATE tienda.Inventario SET Cantidad = "+ncant+" WHERE ID = "+jTableMostrar.getValueAt(j, 0);
-                c.actulizar("tienda", "root1", "P@ssword12", sql);
+                String sql = "UPDATE Tienda.Inventario SET Cantidad = "+ncant+" WHERE ID = "+jTableMostrar.getValueAt(j, 0);
+                c.actulizar("Tienda", "root1", "P@ssword12", sql);
                 JOptionPane.showMessageDialog(this, "Producto Vendido", "Informacion", INFORMATION_MESSAGE);
             } else {
                 JOptionPane.showMessageDialog(this, "En el articulo de ID: "+jTableMostrar.getValueAt(j, 0)+" exede las existencias", "Informacion", WARNING_MESSAGE);
