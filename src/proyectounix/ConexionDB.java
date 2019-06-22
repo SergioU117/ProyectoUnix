@@ -81,7 +81,7 @@ public class ConexionDB {
             }
    
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "No se puede insertarr", "Error", ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "No se puede insertar", "Error", ERROR_MESSAGE);
         } finally {
             this.desconectar();
         }
