@@ -10,7 +10,7 @@ public class ConexionDB {
     private Connection conexion;
     private PreparedStatement consulta;
     private PreparedStatement inserta;
-    public ResultSet datos;//posible public
+    public ResultSet datos;
     private int datosi;
     private final String driver = "com.mysql.jdbc.Driver";
     private String url = "jdbc:mysql://192.168.1.103:3306/";
