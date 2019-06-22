@@ -63,12 +63,11 @@ public class ConexionDB {
         int max = 0;
         try {
             conexion = (Connection) this.getConnection(DB, usr, psswrd);
-            inserta = conexion.prepareStatement("INSERT INTO Tienda.Inventario (ID, Producto, Cantidad, "
-                    + "Costo) VALUES (NULL, ?, ?, ?)");
+            inserta = conexion.prepareStatement("INSERT INTO Tienda.Inventario (ID, Producto, Cantidad, Costo) VALUES (NULL, ?, ?, ?)");
             inserta.setString(1,pro);
             inserta.setInt(2,can);
             inserta.setFloat(3,cos);
-            consulta = conexion.prepareStatement("SELECT MAX(ID)FROM tienda.Inventario");
+            consulta = conexion.prepareStatement("SELECT MAX(ID)FROM Tienda.Inventario");
             datosi = inserta.executeUpdate();
             datos = consulta.executeQuery();
             while (datos.next()) {
