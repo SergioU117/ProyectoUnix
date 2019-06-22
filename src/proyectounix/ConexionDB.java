@@ -37,9 +37,7 @@ public class ConexionDB {
         try {
             conexion = (Connection) this.getConnection(DB, usr, psswrd);
             consulta = conexion.prepareStatement(sql);
-            datos = consulta.executeQuery();
-            
-               
+            datos = consulta.executeQuery();                      
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "No se pudo hacer la consulta", "Error", ERROR_MESSAGE);
         }
@@ -55,8 +53,7 @@ public class ConexionDB {
             JOptionPane.showMessageDialog(null, "No se puede actualizar", "Error", ERROR_MESSAGE);
         } finally {
             this.desconectar();
-        }
-        
+        }       
     }
     
     public void insertar(String DB, String usr, String psswrd, String pro, Integer can, Float cos) {
@@ -77,8 +74,7 @@ public class ConexionDB {
                 JOptionPane.showMessageDialog(null, "Valores correctamente insertados\nClave: "+max, "Informacion", INFORMATION_MESSAGE);
             } else {
                 JOptionPane.showMessageDialog(null, "Error al inserar", "Informacion", WARNING_MESSAGE);
-            }
-   
+            }   
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "No se puede insertar", "Error", ERROR_MESSAGE);
         } finally {

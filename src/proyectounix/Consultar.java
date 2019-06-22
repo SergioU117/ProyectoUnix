@@ -12,8 +12,6 @@ public class Consultar extends javax.swing.JFrame {
         this.setResizable(false);
         i = 0;
     }
-    
-    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -133,9 +131,6 @@ public class Consultar extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonConsultarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
